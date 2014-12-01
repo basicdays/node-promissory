@@ -7,12 +7,22 @@ function promissory(fn) {
 	assert(typeof fn == 'function', 'function required');
 
 	return function() {
-		var args = arrayFrom(arguments);
+		var args = new Array(arguments.length);
 		var ctx = this;
+		var i;
+
+		for (i = 0; i < arguments.length; i++) {
+			args[i] = arguments[i];
+		}
 
 		return new Promise(function(resolve, reject) {
 			args.push(function promisedWork() {
-				var args = arrayFrom(arguments);
+				var args = new Array(arguments.length);
+				var i;
+
+				for (i = 0; i < arguments.length; i++) {
+					args[i] = arguments[i];
+				}
 
 				if (args[0]) {
 					reject(args[0]);
@@ -25,14 +35,4 @@ function promissory(fn) {
 			fn.apply(ctx, args);
 		});
 	};
-}
-
-function arrayFrom(oldArgs) {
-	var args = new Array(oldArgs.length);
-	var i;
-
-	for (i = 0; i < args.length; i++) {
-		args[i] = oldArgs[i];
-	}
-	return args;
 }
