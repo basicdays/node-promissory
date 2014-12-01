@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/basicdays/node-promissory",
   "devDependencies": {
-    "chai": "^1.10.0",
     "jshint": "^2.5.10",
     "mocha": "^2.0.1"
   }
