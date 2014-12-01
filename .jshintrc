@@ -10,7 +10,6 @@
 
 	"boss": true,
 	"debug": true,
-	"esnext": true,
 	"evil": true,
 	"expr": true,
 	"globalstrict": true,
@@ -18,5 +17,9 @@
 	"smarttabs": true,
 
 	"devel": true,
-	"node": true
+	"node": true,
+
+	"globals": {
+		"Promise": false
+	}
 }
