@@ -1,6 +1,6 @@
 {
   "name": "promissory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn a regular node function into one which returns a promise",
   "main": "index.js",
   "scripts": {
