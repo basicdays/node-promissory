@@ -71,6 +71,20 @@ describe('promissory(fn)', function() {
 		return loadPromissory();
 	});
 
+	it('should pass no results', function() {
+		function connect(fn) {
+			setTimeout(function() {
+				fn(null);
+			}, 5);
+		}
+
+		var connectPromissory = promissory(connect);
+
+		return connectPromissory().then(function(vals) {
+			assert(!vals);
+		});
+	});
+
 	it('should pass all results', function() {
 		function read(file, fn) {
 			setTimeout(function() {
