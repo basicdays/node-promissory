@@ -7,4 +7,5 @@ node_modules
 *.kate-swp
 
 # file managers
+.DS_Store
 .directory
