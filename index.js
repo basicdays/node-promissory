@@ -102,7 +102,7 @@ function setMethods(source, whitelist, suffix) {
 	props = {};
 	for (i = 0; i < whitelist.length; i++) {
 		key = whitelist[i];
-		if (!key in source) {
+		if (!(key in source)) {
 			continue;
 		}
 		val = source[key];
