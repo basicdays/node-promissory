@@ -1,3 +1,4 @@
+SHELL := /usr/bin/env bash
 export PATH := bin:node_modules/.bin:$(PATH)
 
 .PHONY: build
@@ -8,7 +9,7 @@ node_modules: package.json
 
 .PHONY: test
 test: lint
-	@mocha --reporter=spec --timeout 2s
+	@mocha --reporter=spec --timeout 2s --require ./test
 
 .PHONY: lint
 lint:

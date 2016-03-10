@@ -5,14 +5,13 @@
 	"latedef": "nofunc",
 	"newcap": true,
 	"noarg": true,
-	"strict": true,
+	"strict": "global",
 	"trailing": true,
 
 	"boss": true,
 	"debug": true,
 	"evil": true,
 	"expr": true,
-	"globalstrict": true,
 	"multistr": true,
 	"smarttabs": true,
 

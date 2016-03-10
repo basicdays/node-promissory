@@ -11,6 +11,7 @@
     "url": "https://github.com/basicdays/node-promissory"
   },
   "keywords": [
+    "async",
     "promise",
     "co",
     "generator",
@@ -22,8 +23,12 @@
     "url": "https://github.com/basicdays/node-promissory/issues"
   },
   "homepage": "https://github.com/basicdays/node-promissory",
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "devDependencies": {
     "jshint": "^2.5.10",
-    "mocha": "^2.0.1"
+    "mocha": "^2.0.1",
+    "promise-polyfill": "^3.1.0"
   }
 }
